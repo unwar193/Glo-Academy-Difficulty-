@@ -29,3 +29,11 @@ console.log("произведение цифр в числе: ", answer1);
 let answer2 = answer1 ** 3;
 
 console.log("Первые две цифры: ", String(answer2).slice(0,2));
+
+//Можешь попробовать усложненное задание сделать через метод reduce
+
+let numStr = num.toString().split(''); //привожу число сначала к строке, потом к массиву чтобы использовать метод reduce
+let multipl2 = numStr.reduce((a,b) => a * b); // метод reduce перемножает элементы массива между собой
+
+
+console.log("Полчуение произведения всех цифр числа методом reduce: ",  multipl2);
