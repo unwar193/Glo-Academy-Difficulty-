@@ -88,7 +88,7 @@ result.forEach(day => console.log(day));*/
 — В полученной (как аргумент) строке функция должна убрать все пробелы в начале и в конце
 
 — Если строка более 30 знаков - то после 30го символа часть текста скрывается и вместо них появляются три точки (...)
-
+*/
 
 let myStr = "моя строка";
 let myNum = 12;
@@ -111,33 +111,50 @@ function checkString(input) {
 console.log(checkString(myStr))
 console.log(checkString(myNum))
 console.log(checkString(myStr2))
-*/
 
-let arr = [
-    '2456',
-    '4658',
-    '1515',
-    '1616',
-    '9876',
-    '1234',
-    '9637'
-];
 
-function isPrime(num) {
-    if (num < 2) return false;
-    if (num === 2) return true;
-    if (num % 2 === 0) return false;
+/*Урок 5+ 
+1) Создать массив arr = []
+— Записать в него 7 любых многозначных чисел в виде строк
+— Вывести в консоль только те, что начинаются с цифры 2 или 4 (Должны присутствовать в массиве)
+2) Вывести в столбик все простые числа от 1 до 100 (сделать при помощи цикла)
+— Рядом с каждым числом написать оба делителя данного числа
+    Например: “Делители этого числа: 1 и n”*/
+
+// let arr = [
+//     '2456',
+//     '4658',
+//     '1515',
+//     '1616',
+//     '9876',
+//     '1234',
+//     '9637'
+// ];
+
+// for (let i = 0; i < arr.length; i++) {
+//     let j =  arr[i] ;
+//     if (j[0] == 2 || j[0] == 4) {
+//        console.log(j); 
+//     } else {continue}
+// }
+
+
+
+// function isPrime(num) {
+//     if (num < 2) return false;
+//     if (num === 2) return true;
+//     if (num % 2 === 0) return false;
     
-    for (let i = 3; i <= Math.sqrt(num); i += 2) {
-        if (num % i === 0) return false;
-    }
-    return true;
-}
+//     for (let i = 3; i <= Math.sqrt(num); i += 2) {
+//         if (num % i === 0) return false;
+//     }
+//     return true;
+// }
 
-// Вывод в столбик
-console.log("Простые числа от 1 до 100:\n");
-for (let i = 1; i <= 100; i++) {
-    if (isPrime(i)) {
-        console.log(`${i} — Делители: 1 и ${i}`);
-    }
-}
+// // Вывод в столбик
+// console.log("Простые числа от 1 до 100:\n");
+// for (let i = 1; i <= 100; i++) {
+//     if (isPrime(i)) {
+//         console.log(`${i} — Делители: 1 и ${i}`);
+//     }
+// }
