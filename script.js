@@ -82,7 +82,6 @@ const days = {
 const result = days[lang] || days['en'];
 
 result.forEach(day => console.log(day));*/
-
 /* Урок 4 +
 1) Создайте функцию, которая принимает 1 аргумент (название произвольное)
 
@@ -113,4 +112,32 @@ console.log(checkString(myStr))
 console.log(checkString(myNum))
 console.log(checkString(myStr2))
 */
-console.log('test')
+
+let arr = [
+    '2456',
+    '4658',
+    '1515',
+    '1616',
+    '9876',
+    '1234',
+    '9637'
+];
+
+function isPrime(num) {
+    if (num < 2) return false;
+    if (num === 2) return true;
+    if (num % 2 === 0) return false;
+    
+    for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// Вывод в столбик
+console.log("Простые числа от 1 до 100:\n");
+for (let i = 1; i <= 100; i++) {
+    if (isPrime(i)) {
+        console.log(`${i} — Делители: 1 и ${i}`);
+    }
+}
