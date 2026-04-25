@@ -19,21 +19,22 @@ let curDay = "";
 curDay = new Date().getDay();
 
 for (let key in week) {
+  let day = week[key];
+  console.log(day);
+
   if (key == curDay - 1) {
     const div = document.createElement("div");
-    div.innerHTML = `<b>${week[key]}</b>`;
-    document.body.appendChild(div);
-  } else if ((key === 5 || key === 6) && key === curDay) {
+    day = `<b>${week[key]}</b>`;
+  } else {const div = document.createElement("div");
+    day = week[key];};
+  
+  if (key == 5 || key == 6) {
     const div = document.createElement("div");
-    div.innerHTML = `<i><strong>${week[key]}</strong></i>`;
-    document.body.appendChild(div);
-  } else if (key == 5 || key == 6) {
-    const div = document.createElement("div");
-    div.innerHTML = `<i>${week[key]}</i>`;
-    document.body.appendChild(div);
-  } else {
-    const div = document.createElement("div");
-    div.textContent = `${week[key]}`;
+    day = `<i>${day}</i>`;
+  } else {const div = document.createElement("div");
+    day = week[key]};
+  
+  const div = document.createElement("div");
+    div.innerHTML = day;
     document.body.appendChild(div);
   }
-}
