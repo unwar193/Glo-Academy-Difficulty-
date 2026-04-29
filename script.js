@@ -7,13 +7,13 @@
 // Текущий день - жирным шрифтом(использовать объект даты)
 
 const week = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота",
+  "Воскресенье",
 ];
 let curDay = "";
 curDay = new Date().getDay();
@@ -32,9 +32,11 @@ for (let key in week) {
     const div = document.createElement("div");
     day = `<i>${day}</i>`;
   } else {const div = document.createElement("div");
-    day = week[key]};
+    day};
   
   const div = document.createElement("div");
     div.innerHTML = day;
     document.body.appendChild(div);
   }
+
+ 
